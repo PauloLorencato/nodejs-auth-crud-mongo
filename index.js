@@ -16,6 +16,7 @@ app.get('/', async (req,res) => {
 
 // rotas básicas
 app.use('/auth', auth)
+app.use('/crud', crud)
 
 // conexão ao banco
 mongoose
