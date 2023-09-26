@@ -10,8 +10,11 @@ require('dotenv').config()
 // middleware
 app.use(express.json())
 
+app.get('/', async (req,res) => {
+  res.status(200).json({msg: "Landing page"})
+})
+
 // rotas básicas
-app.use('/data', crud)
 app.use('/auth', auth)
 
 // conexão ao banco
